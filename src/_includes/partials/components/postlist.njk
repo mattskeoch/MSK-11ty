@@ -1,0 +1,45 @@
+{% if postlist %}
+{%- for post in postlist -%}
+<article class="post-list">
+
+  <div class="container">
+    <div class="post-list__meta">
+      {% if post.data.date %}
+      <time class="post__date" datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+      {% endif %}
+
+      <h2 class="post-list__title">
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+
+      {% for tag in post.data.tags %}
+      {%- if collections.tagList.indexOf(tag) != -1 -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+      {%- endif -%}
+      {% endfor %}
+    </div>
+
+    <div class="post-list__description">
+      <p>{{ post.data.description }} </p>
+    </div>
+  </div>
+</article>
+{%- endfor -%}
+{% endif %}
+
+{% if pagination.href.previous or pagination.href.next %}
+<div class="container">
+  <nav class="pagination__nav">
+
+    {% if pagination.href.previous %}
+    <p><a href="{{ pagination.href.previous }}">Previous</a></p>
+    {% endif %}
+
+    {% if pagination.href.next %}
+    <p><a href="{{ pagination.href.next }}">Next</a></p>
+    {% endif %}
+
+  </nav>
+</div>
+{% endif %}

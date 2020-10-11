@@ -1,0 +1,25 @@
+botton.tag {
+  cursor: pointer;
+  background-color: rgba(var(--color-secondary),1);
+  border: none;  
+  padding: .1rem .5rem;
+  font-size: 0.718em;
+  text-align: center; 
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 6px;
+  margin-left: -1px;
+  margin-top: .4rem;
+  margin-bottom: .6rem;
+  border-radius: 100px;
+  transition: background-color 250ms ease-in-out;
+
+  &:hover{
+    background-color: rgba(var(--color-secondary),0.8);
+  }
+}
+
+botton.tag a{
+    color: var(--color-white);
+    text-decoration: none;
+}

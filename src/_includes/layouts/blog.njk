@@ -1,0 +1,12 @@
+---
+layout: /layouts/base.njk
+---
+
+ {% block content %}
+
+        {{ content | safe }}
+
+        {% include "partials/components/postlist.njk" %}
+
+{% endblock %}
+

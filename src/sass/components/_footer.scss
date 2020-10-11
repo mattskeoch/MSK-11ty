@@ -1,0 +1,10 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--color-background));
+
+  p {
+    text-align: center;
+  }
+}

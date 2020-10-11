@@ -1,0 +1,54 @@
+{% if snippetpostlist %}
+<div class="snippet-page margin-b">
+  <div class="container">
+    <ul class="auto-grid">
+      {%- for snippet in snippetpostlist -%}
+      <li>
+        <h3 class="snippet-page__heading">
+          <a href="{{ snippet.url }}">
+            {{ snippet.data.title }}
+          </a>
+        </h3>
+
+        {% if snippet.data.date %} <time class="post__date"
+          datetime="{{ snippet.date | dateIso }}">{{ snippet.date | dateReadable }}</time>
+        {% endif %}
+
+        {% for tag in snippet.data.tags %}
+        {%- if collections.tagList.indexOf(tag) != -1 -%}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <botton class="tag">
+          <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        </botton>
+        {%- endif -%}
+        {% endfor %}
+
+        <p class="snippet-page__description">{{ snippet.data.description }}</p>
+
+        <a class="snippet-page__link" href="{{ snippet.url }}">
+          Read More
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+<div class="pagination margin-b">
+  {% if pagination.href.previous or pagination.href.next %}
+  <div class="container">
+    <nav class="pagination__nav">
+
+      {% if pagination.href.previous %}
+      <p><a href="{{ pagination.href.previous }}">previous</a></p>
+      {% endif %}
+
+      {% if pagination.href.next %}
+      <p><a href="{{ pagination.href.next }}">next</a></p>
+      {% endif %}
+
+    </nav>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,11 @@
+.intro {
+    background-color: rgba(var(--color-background));
+}
+
+
+
+@include breakpoint('medium') {
+    p.intro__text {
+        max-width: 80%;
+    }
+}

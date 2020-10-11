@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+</head>
+
+<body>
+    {% include "partials/components/site-header.njk" %}
+
+    <main>
+        {% block content %}
+
+        {{ content | safe }}
+
+
+        {% endblock %}
+    </main>
+
+
+    {% include "partials/components/site-footer.njk" %}
+
+    <script type="module" src="/js/script.js" async defer></script>
+    <script type="module" src="/js/toggle-theme.js" async defer></script>
+</body>
+
+</html>

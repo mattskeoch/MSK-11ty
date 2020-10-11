@@ -1,0 +1,27 @@
+
+<h2 class="postlist-featured__header container">{{ postListTitle }}</h2>
+<div class="container">
+{% for post in collections.featured %}
+
+<article class="postlist-featured">
+  <div class="postlist-featured__meta">
+    {% if post.data.date %}
+    <time class="post__date" datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+    {% endif %}
+    <h3 class="postlist-featured__title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+    {% for tag in post.data.tags %}
+    {%- if collections.tagList.indexOf(tag) != -1 -%}
+    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {%- endif -%}
+    {% endfor %}
+  </div>
+  
+  <div class="postlist-featured__description">
+    <p>{{ post.data.description }} </p>
+  </div>
+</article>
+
+{%- endfor -%}</div>

@@ -1,0 +1,21 @@
+{% extends "./layouts/base.njk" %}
+
+{% block content %}
+
+<article class="snippet">
+  <div class="container">
+
+    <h1 class="snippet__heading">{{ title }}</h1>
+    {% if date %}<time class="post__date"
+      datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>{% endif %}
+
+    {{ content | safe }}
+
+    {% set nextPost = collections.post | getNextCollectionItem(page) %}
+    {% if nextPost %}<p>Next article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
+
+    {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+    {% if previousPost %}<p>Previous article: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></p>
+    {% endif %}
+
+    {% endblock %}
