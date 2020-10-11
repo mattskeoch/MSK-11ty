@@ -12,8 +12,8 @@
   // --color-white: 255, 255, 255;
   // --color-black: 0, 0 , 0;
 
-  --content-width: 1000px;
-  --content-width-small: 800px;
+  --content-width: 62.25rem;
+  --content-width-small: 50rem;
   
 }
 
@@ -74,7 +74,7 @@ time {
 }
 
 .flow {
-  --flow-space: 2em;
+  --flow-space: 3em;
 }
 
 .flow > * + * {

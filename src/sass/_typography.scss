@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --font-family: 'Frank Ruhl Libre', serif;
-  --font-family-alt: 'Source Sans Pro', sans-serif;
+  --font-family: 'Inter', sans-serif;
+  --font-family-alt: 'Inter', sans-serif;
   --font-weight: 400;
-  --font-weigh-semi-bold: 500;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
-  --font-weight-black: 900;
+  --font-weight-black: 800;
 
   // minor third = 1.200 
   // major third = 1.250 
@@ -38,7 +38,7 @@ h3,
 h4 {
   color: rgba(var(--color-heading));
   font-family: var(--font-family);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--font-weight-bold);
   line-height: 1.15;
 }
 
@@ -70,7 +70,7 @@ p {
   font-size: var(--font-size-8);
   font-family: var(--font-family-alt);
   color: rgba(var(--color-text));
-  --flow-space: 1rem;
+  --flow-space: 1.55rem;
 }
 
 blockquote,
