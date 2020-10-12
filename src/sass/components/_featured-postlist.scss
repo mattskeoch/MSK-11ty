@@ -1,0 +1,21 @@
+.postlist-featured{
+    &__heading{
+        margin-bottom: var(--spacing-size-1);
+    }
+
+    &__date{
+        color: rgba(var(--color-main));
+    }
+
+    &__title{
+        margin-bottom: calc(var(--spacing-size-1) / 3);
+    }
+
+    &__tags{
+        margin-bottom: calc(var(--spacing-size-1) / 3);
+    }
+
+    &__description{
+        margin-bottom: var(--spacing-size-3);
+    }
+}
