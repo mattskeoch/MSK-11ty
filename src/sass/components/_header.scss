@@ -1,11 +1,11 @@
 .logo {
     font-weight: bold;
     font-size: 20px;
-    color: rgba(var(--color-heading));
+    color: rgba(var(--color-main));
   }
   
   .header {
-    position: relative;    
+    position: relative;   
   }
 
   
@@ -18,8 +18,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 0;
-      padding-bottom: 0;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
   }
   @media (min-width: 600px) {

@@ -1,25 +1,16 @@
-botton.tag {
-  cursor: pointer;
-  background-color: rgba(var(--color-secondary),1);
-  border: none;  
-  padding: .1rem .5rem;
-  font-size: 0.718em;
-  text-align: center; 
-  text-transform: uppercase;
-  display: inline-block;
-  margin-right: 6px;
-  margin-left: -1px;
-  margin-top: .4rem;
-  margin-bottom: .6rem;
-  border-radius: 100px;
-  transition: background-color 250ms ease-in-out;
+.post-tag {
+  color: rgba(var(--color-title));
+  background-color: rgba(var(--color-secondary));
+  border: 2px solid rgba(var(--color-secondary));
+  font-size: 0.75rem;  
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  padding: .3em .6em;
+  transition: all 280ms ease-in-out;
 
   &:hover{
-    background-color: rgba(var(--color-secondary),0.8);
+    color: rgba(var(--color-main));
+    background-color: rgba(var(--color-secondary)0);
+    border: 2px solid rgba(var(--color-main));
   }
-}
-
-botton.tag a{
-    color: var(--color-white);
-    text-decoration: none;
 }
