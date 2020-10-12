@@ -1,11 +1,17 @@
 .intro {
-    background-color: rgba(var(--color-background));
+    background-color: rgba(var(--color-secondary));
+    padding: var(--spacing-size-4) 0;
+    margin-bottom: var(--spacing-size-4);  
 }
-
-
-
 @include breakpoint('medium') {
-    p.intro__text {
+    .intro{
+        padding: var(--spacing-size-5) 0;
+        margin-bottom: var(--spacing-size-5);  
+    
+    &__text {
         max-width: 80%;
     }
+  } 
 }
+
+

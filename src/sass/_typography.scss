@@ -14,21 +14,21 @@
   // perfect fourth = 1.333 
 
   --font-scale: 1.250;
-  --font-size-1: calc(var(--font-scale) * var(--font-size-2));
-  --font-size-2: calc(var(--font-scale) * var(--font-size-3));
-  --font-size-3: calc(var(--font-scale) * var(--font-size-4));
-  --font-size-4: calc(var(--font-scale) * var(--font-size-5));
-  --font-size-5: calc(var(--font-scale) * var(--font-size-6));
-  --font-size-6: calc(var(--font-scale) * var(--font-size-7));
-  --font-size-7: calc(var(--font-scale) * var(--font-size-8));
-  --font-size-8: 1.125em;
+  --font-size-8: calc(var(--font-scale) * var(--font-size-7));
+  --font-size-7: calc(var(--font-scale) * var(--font-size-6));
+  --font-size-6: calc(var(--font-scale) * var(--font-size-5));
+  --font-size-5: calc(var(--font-scale) * var(--font-size-4));
+  --font-size-4: calc(var(--font-scale) * var(--font-size-3));
+  --font-size-3: calc(var(--font-scale) * var(--font-size-2));
+  --font-size-2: calc(var(--font-scale) * var(--font-size-1));
+  --font-size-1: 1.125em;
 
   --font-size-small: 0.875rem;
 }
 
 @include breakpoint('medium') {
   :root{
-    --font-size-8: 1.333em;
+    --font-size-1: 1.333em;
   }
 } 
 
@@ -36,14 +36,14 @@ h1,
 h2,
 h3,
 h4 {
-  color: rgba(var(--color-heading));
+  color: rgba(var(--color-title));
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
   line-height: 1.15;
 }
 
 h1 {
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-5);
   --flow-space: 3rem;
 
   a {
@@ -52,24 +52,25 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-5);
+  font-size: var(--font-size-4);
   --flow-space: 2.125rem;
 }
 
 h3 {
-  font-size: var(--font-size-6);
+  font-size: var(--font-size-3);
   --flow-space: 2rem;
 }
 
 h4 {
-  font-size: var(--font-size-7);
+  font-size: var(--font-size-2);
   --flow-space: 1rem;
 }
 
 p {
-  font-size: var(--font-size-8);
+  font-size: var(--font-size-1);
   font-family: var(--font-family-alt);
   color: rgba(var(--color-text));
+  line-height: 1.6;
   --flow-space: 1.55rem;
 }
 

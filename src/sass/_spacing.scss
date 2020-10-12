@@ -1,13 +1,13 @@
 :root {
   --spacing-scale: 1.500;
 
-  --spacing-size-8: calc(var(--spacing-scale) * var(--spacing-size-7));
-  --spacing-size-7: calc(var(--spacing-scale) * var(--spacing-size-6));
-  --spacing-size-6: calc(var(--spacing-scale) * var(--spacing-size-5));
-  --spacing-size-5: calc(var(--spacing-scale) * var(--spacing-size-4));
-  --spacing-size-4: calc(var(--spacing-scale) * var(--spacing-size-3));
-  --spacing-size-3: calc(var(--spacing-scale) * var(--spacing-size-2));
-  --spacing-size-2: calc(var(--spacing-scale) * var(--spacing-size-1));
+  --spacing-size-8: calc(var(--spacing-scale) * var(--spacing-size-7)); //22.7812
+  --spacing-size-7: calc(var(--spacing-scale) * var(--spacing-size-6)); //15.1875
+  --spacing-size-6: calc(var(--spacing-scale) * var(--spacing-size-5)); //10.125
+  --spacing-size-5: calc(var(--spacing-scale) * var(--spacing-size-4)); //6.75
+  --spacing-size-4: calc(var(--spacing-scale) * var(--spacing-size-3)); //4.5
+  --spacing-size-3: calc(var(--spacing-scale) * var(--spacing-size-2)); //3
+  --spacing-size-2: calc(var(--spacing-scale) * var(--spacing-size-1)); //1.5
   --spacing-size-1: 1em;
 }
 

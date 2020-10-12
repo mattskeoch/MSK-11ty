@@ -1,16 +1,13 @@
 :root {
   //Colors
-  // --color-background: 239, 240, 243; 
-  // --color-heading: 13, 13, 13;
-  // --color-text: 42, 42, 42;
-  // --color-link: 255, 142, 60;
-  // --color-button: 255, 142, 60;
-  // --color-button-text: 13, 13, 13;
-  // --color-secondary: 217, 55, 110;
-  // --color-highlight: 255, 142, 60;
+  --color-main: 255, 113, 113;
+  --color-secondary: 255, 240, 174;
+  --color-tertiary: 246, 246 ,246;
+  --color-title: 61, 61, 61;
+  --color-text: 61, 61, 61;
 
-  // --color-white: 255, 255, 255;
-  // --color-black: 0, 0 , 0;
+  --color-white: 255, 255, 255;
+  --color-black: 0, 0 , 0;
 
   --content-width: 62.25rem;
   --content-width-small: 50rem;
@@ -25,7 +22,7 @@
   // --color-button: 255, 142, 60;
   // --color-button-text: 255, 255, 254;
   // --color-secondary: 242, 95, 76;
-  // --color-highlight: 229, 49, 112;
+  // --color-main: 229, 49, 112;
 
   // --color-white: 255, 255, 255;
   // --color-black: 0, 0 , 0;  
@@ -64,6 +61,12 @@ time {
 
 .full-bleed {
   width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.bleed {
+  width: 80vw;
   margin-left: 50%;
   transform: translateX(-50%);
 }
