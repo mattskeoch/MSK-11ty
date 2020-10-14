@@ -1,5 +1,5 @@
 ---
-title: Blog index
+title: Writing
 description: A list of articles published on this site.
 layout: /layouts/blog.njk
 eleventyNavigation:

@@ -1,5 +1,5 @@
  
- <div class="pagination">
+ <div class="pagination container">
  {% set nextPost = collections.post | getNextCollectionItem(page) %}
     {% if nextPost %}<p>Next article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
 

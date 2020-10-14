@@ -1,21 +1,19 @@
 {% extends "./layouts/base.njk" %}
 
 {% block content %}
-
-<main class="post container-small flow">
-  <div class="post__meta">
-  <h1 class="post__title">{{ title }}</h1>
-  {% if date %}<time class="post__date"
-    datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>{% endif %}
-  <p class="post__words">{{ content | wordcount | readtime }}</p>
-</div>
-  <article class="post__content flow">
-
+<article class="post">
+  <header class="intro">
+    <div class="container">
+      {% if date %}
+      <time class="post__date" datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+      {% endif %}
+      <h1 class="post__title">{{ title }}</h1>
+      <span class="post__words">{{ content | wordcount | readtime }}</span>
+    </div>
+  </header>
+  <div class="post__content container flow">
     {{ content | safe }}
-
-   
-  </article> 
-{% include "partials/components/pagination.njk" %}
-</main>
-
+  </div>
+  {% include "partials/components/pagination.njk" %}
+</article>
 {% endblock %}

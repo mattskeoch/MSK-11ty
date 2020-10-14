@@ -6,10 +6,12 @@
 @import "spacing";
 
 // Components
-@import "components/header";
-@import "components/footer";
+@import "components/site-header";
+@import "components/site-footer";
 @import "components/featured-postlist";
 @import "components/intro";
 @import "components/tags";
 @import "components/snippets";
+@import "components/pagination";
+@import "components/buttons";
 @import "components/prism";

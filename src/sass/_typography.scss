@@ -9,18 +9,18 @@
   --font-weight-bold: 700;
   --font-weight-black: 800;
 
+  //FONT SCALE
   // minor third = 1.200 
   // major third = 1.250 
   // perfect fourth = 1.333 
-
   --font-scale: 1.250;
-  --font-size-8: calc(var(--font-scale) * var(--font-size-7));  //5.321
-  --font-size-7: calc(var(--font-scale) * var(--font-size-6));  //4.257
-  --font-size-6: calc(var(--font-scale) * var(--font-size-5));  //3.406
-  --font-size-5: calc(var(--font-scale) * var(--font-size-4));  //2.725
-  --font-size-4: calc(var(--font-scale) * var(--font-size-3));  //2.18
-  --font-size-3: calc(var(--font-scale) * var(--font-size-2));  //1.75
-  --font-size-2: calc(var(--font-scale) * var(--font-size-1));  //1.4
+  --font-size-8: calc(var(--font-scale) * var(--font-size-7)); //5.321
+  --font-size-7: calc(var(--font-scale) * var(--font-size-6)); //4.257
+  --font-size-6: calc(var(--font-scale) * var(--font-size-5)); //3.406
+  --font-size-5: calc(var(--font-scale) * var(--font-size-4)); //2.725
+  --font-size-4: calc(var(--font-scale) * var(--font-size-3)); //2.18
+  --font-size-3: calc(var(--font-scale) * var(--font-size-2)); //1.75
+  --font-size-2: calc(var(--font-scale) * var(--font-size-1)); //1.4
   --font-size-1: 1.125em;
 
   --font-size-small: 0.875rem;
@@ -28,10 +28,13 @@
 }
 
 @include breakpoint('medium') {
-  :root{
+  :root {
     --font-size-1: 1.333em;
+
+    --font-size-small: 1rem;
+    --font-size-smallest: 0.6rem;
   }
-} 
+}
 
 h1,
 h2,
@@ -67,7 +70,8 @@ h4 {
   --flow-space: 1rem;
 }
 
-p {
+p,
+span {
   font-size: var(--font-size-1);
   font-family: var(--font-family-alt);
   color: rgba(var(--color-text));
@@ -76,8 +80,8 @@ p {
 }
 
 blockquote,
-blockquote + * {
-    --flow-space: 2rem;
-    font-size: var(--font-size-4);
-    background-color: green;
+blockquote+* {
+  --flow-space: 2rem;
+  font-size: var(--font-size-4);
+  background-color: green;
 }

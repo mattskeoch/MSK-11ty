@@ -6,5 +6,8 @@
         <p class="intro__text">
           {{ intro.text }}  
         </p>
+        {% if button.text %}
+        <a href="{{ button.url }}" class="btn--outline"> {{ button.text }} </a>
+        {% endif %}
     </div>
 </section>

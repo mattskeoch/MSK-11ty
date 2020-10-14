@@ -2,13 +2,6 @@ const moment = require('moment');
 moment.locale('en');
 const now = new Date();
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-// dev = global.dev = (process.env.ELEVENTY_ENV === 'development'),
-
-
-
-module.exports = function (eleventyConfig) {
-
-};
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -16,13 +9,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy('./src/js');
   eleventyConfig.addPassthroughCopy("./src/img");
-
   eleventyConfig.addFilter("randomItem", (arr) => {
     arr.sort(() => {
       return 0.5 - Math.random();
     });
     return arr.slice(0, 1);
   });
+
   //date format
   eleventyConfig.addFilter('dateIso', date => {
     return moment(date).toISOString();
@@ -30,6 +23,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dateReadable', date => {
     return moment(date).utc().format('Do MMMM, YYYY'); // E.g. May 31, 2019
   });
+
   // format word count and reading time
   eleventyConfig.addFilter('readtime', require('./lib/filters/readtime'));
 
@@ -75,12 +69,9 @@ module.exports = function (eleventyConfig) {
         }
       }
     });
-        
+
     return [...tagSet];
   });
-
-
-
 
   return {
     dir: {

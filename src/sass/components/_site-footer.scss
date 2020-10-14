@@ -1,0 +1,20 @@
+footer {
+  background-color: rgba(var(--color-secondary));
+  padding: var(--spacing-size-3) 0;
+
+
+  p {
+    color: rgba(var(--color-text));
+  }
+}
+
+.nav-footer__list {
+  display: flex;
+
+  .nav-footer__link {
+    display: block;
+    color: rgba(var(--color-text));
+    padding-top: var(--spacing-size-1);
+    padding-right: var(--spacing-size-1);
+  }
+}

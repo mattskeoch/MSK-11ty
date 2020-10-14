@@ -1,21 +1,24 @@
 .intro {
     background-color: rgba(var(--color-secondary));
     padding: var(--spacing-size-4) 0;
-    margin-bottom: var(--spacing-size-4);  
+    margin-bottom: var(--spacing-size-4);
 
-    &__heading{
-     font-size: var(--font-size-5);
+    &__heading {
+        font-size: var(--font-size-5);
     }
-}
-@include breakpoint('medium') {
-    .intro{
-        padding: var(--spacing-size-5) 0;
-        margin-bottom: var(--spacing-size-5);  
-    
+
     &__text {
-        max-width: 80%;
+        margin-bottom: var(--spacing-size-2);
     }
-  } 
 }
 
+@include breakpoint('medium') {
+    .intro {
+        padding: var(--spacing-size-4) 0;
+        margin-bottom: var(--spacing-size-5);
 
+        &__text {
+            max-width: 80%;
+        }
+    }
+}

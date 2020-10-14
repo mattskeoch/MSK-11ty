@@ -2,19 +2,27 @@
   //Colors
   --color-main: 255, 113, 113;
   --color-secondary: 255, 240, 174;
-  --color-tertiary: 246, 246 ,246;
+  --color-tertiary: 246, 246, 246;
   --color-title: 61, 61, 61;
   --color-text: 61, 61, 61;
+  --color-background: 255, 255, 255;
 
   --color-white: 255, 255, 255;
-  --color-black: 0, 0 , 0;
+  --color-black: 0, 0, 0;
 
-  --content-width: 62.25rem;
-  --content-width-small: 50rem;
-  
+  --content-width-large: 62.25rem;
+  --content-width: 50rem;
+
 }
 
 .dark-mode {
+
+  --color-text: 255, 240, 174;
+  --color-background: 24, 24, 26;
+  --color-title: 255, 113, 113;
+
+
+
   // --color-background: 15, 14, 23; 
   // --color-heading: 255, 255, 254;
   // --color-text: 167, 169, 190;
@@ -38,21 +46,21 @@ a {
 }
 
 time {
-  display: block;  
-  color: rgba(var(--color-text));
-  font-size: var(--font-size-small); 
-}  
+  display: block;
+  color: rgba(var(--color-main));
+  font-size: var(--font-size-small);
+}
 
-.container {
-  max-width: var(--content-width);
+.container-large {
+  max-width: var(--content-width-large);
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.container-small {
-  max-width: var(--content-width-small);
+.container {
+  max-width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -80,17 +88,13 @@ time {
   --flow-space: 3em;
 }
 
-.flow > * + * {
+.flow>*+* {
   margin-top: 1em;
   margin-top: var(--flow-space);
 }
-
-
 
 .auto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
   grid-gap: 3rem;
 }
-
-
