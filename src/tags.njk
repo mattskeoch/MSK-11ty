@@ -16,9 +16,7 @@ eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
 ---
-<div class="container">
-<h1>Tagged “{{ tag }}”</h1>
-</div>
+
 {% set postlist = collections[ tag ] %}
 {% include "partials/components/postlist.njk" %}
 <div class="container">

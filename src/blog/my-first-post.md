@@ -1,13 +1,21 @@
 ---
-title: My First Post More Words Longer
-description: "It is recommended that you seek legal advice if you are uncertain on any points."
+title: Use if expression to apply data attribute
+description: "Conditionally apply a data attribute using Nunjucks if expression."
 date: 2020-09-01
 tags:
-  - HTML
-  - CSS
+  - 11ty
+  - NJK
   - featured
 key: post
 ---
 
 
-### content is here
+
+
+### content is here 
+
+```js
+<div class="hero" %if page.url === "/" %} data-animated="true" % endif %}></div>
+```
+
+need to wrap if statement open and close with %

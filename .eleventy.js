@@ -16,33 +16,27 @@ module.exports = function (eleventyConfig) {
     return arr.slice(0, 1);
   });
 
-  //date format
   eleventyConfig.addFilter('dateIso', date => {
     return moment(date).toISOString();
   });
   eleventyConfig.addFilter('dateReadable', date => {
-    return moment(date).utc().format('Do MMMM, YYYY'); // E.g. May 31, 2019
+    return moment(date).utc().format('Do MMMM, YYYY');
   });
 
-  // format word count and reading time
   eleventyConfig.addFilter('readtime', require('./lib/filters/readtime'));
 
-  // post collection (in src/blog)
   eleventyConfig.addCollection('post', collection =>
 
     collection
     .getFilteredByGlob('./src/blog/*.md')
     .filter(p => (!p.data.draft && p.date <= now))
-    // .filter(p => dev || (!p.data.draft && p.date <= now))
   );
 
-  // post collection (in src/snippets)
   eleventyConfig.addCollection('snippet', collection =>
     collection
     .getFilteredByGlob('./src/snippets/*.md')
   );
 
-  // tags 
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
     collection.getAll().forEach(function (item) {
@@ -51,7 +45,6 @@ module.exports = function (eleventyConfig) {
 
         tags = tags.filter(function (item) {
           switch (item) {
-            // this list should match the `filter` list in tags.njk
             case "all":
             case "nav":
             case "post":

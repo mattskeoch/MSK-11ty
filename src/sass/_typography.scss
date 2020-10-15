@@ -83,5 +83,5 @@ blockquote,
 blockquote+* {
   --flow-space: 2rem;
   font-size: var(--font-size-4);
-  background-color: green;
+  background-color: rgba(var(--color-secondary));
 }

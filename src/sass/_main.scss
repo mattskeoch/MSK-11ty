@@ -43,6 +43,15 @@ body {
 
 a {
   color: rgba(var(--color-link));
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+:focus {
+  outline: 2px dotted rgba(var(--color-main));
+  outline-offset: 0.25rem;
 }
 
 time {
