@@ -10,8 +10,7 @@
 
   &:hover{
     color: rgba(var(--color-main));
-    background-color: rgba(var(--color-secondary));
-   
+    background-color: rgba(var(--color-secondary));   
   }
 }
 
@@ -30,4 +29,34 @@
     border: 2px solid rgba(var(--color-text));   
     background-color: rgba(var(--color-text)); 
   }
+}
+
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: rgba(var(--color-text)); 
+  background-color: rgba(var(--color-white));
+  font-family: var(--font-family-alt);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;  
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover
+ {
+  background: rgba(var(--color-text));
+  color: #ffffff;
+}
+
+button:active {
+  transform: scale(0.95);
 }
