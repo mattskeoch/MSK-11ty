@@ -4,8 +4,7 @@ date: "2020-02-02"
 description: "Ensure you send all listed documentation through to your BDM in one folder."
 tags:
   - HTML
-  - JS
-  - featured
+  - JS  
 ---
 It is important to keep an up to date record of compliance documentation for your business, employees and sub-contractors.
 

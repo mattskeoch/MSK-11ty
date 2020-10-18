@@ -4,8 +4,7 @@ description: "Conditionally apply a data attribute using Nunjucks if expression.
 date: 2020-09-01
 tags:
   - 11ty
-  - NJK
-  - featured
+  - NJK 
 key: post
 ---
 
@@ -19,3 +18,12 @@ key: post
 ```
 
 need to wrap if statement open and close with %
+
+
+{% raw %}
+    {% highlight 'html' %}
+        {% for currentPost in collections.posts | limit(3)  %}
+           {{ post.title }}
+        {% endfor %}
+    {% endhighlight %}
+{% endraw %}

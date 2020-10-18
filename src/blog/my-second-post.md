@@ -6,7 +6,6 @@ description: "It is important to keep an up to date record of compliance documen
 tags:
   - HTML
   - CSS
-
 ---
 It is important to keep an up to date record of compliance documentation for your business, employees and sub-contractors.
 

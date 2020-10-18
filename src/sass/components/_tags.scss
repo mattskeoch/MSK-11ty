@@ -1,16 +1,27 @@
 .post-tag {
+  display: inline-block;
   color: rgba(var(--color-title));
   background-color: rgba(var(--color-secondary));
   border: 2px solid rgba(var(--color-secondary));
-  font-size: 0.75rem;  
+  font-size: 0.75rem;
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   padding: .3em .6em;
+  margin-bottom: var(--spacing-size-1);
   transition: all 280ms ease-in-out;
 
-  &:hover{
+  &:hover {
     color: rgba(var(--color-main));
     background-color: rgba(var(--color-secondary)0);
     border: 2px solid rgba(var(--color-main));
   }
+}
+
+.tags {
+  height: 100vh;
+  margin-bottom: var(--spacing-size-4);
+}
+
+.all-tags {
+  margin-bottom: var(--spacing-size-4);
 }

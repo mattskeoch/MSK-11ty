@@ -12,18 +12,14 @@
 
   --content-width-large: 62.25rem;
   --content-width: 50rem;
-
 }
 
 .dark-mode {
-
   --color-text: 255, 240, 174;
   --color-background: 24, 24, 26;
   --color-title: 255, 113, 113;
 
-
-
-  // --color-background: 15, 14, 23; 
+  // --color-background: 15, 14, 23;
   // --color-heading: 255, 255, 254;
   // --color-text: 167, 169, 190;
   // --color-link: 255, 137, 6;
@@ -33,7 +29,7 @@
   // --color-main: 229, 49, 112;
 
   // --color-white: 255, 255, 255;
-  // --color-black: 0, 0 , 0;  
+  // --color-black: 0, 0 , 0;
 }
 
 body {
@@ -42,9 +38,9 @@ body {
 }
 
 a {
-  color: rgba(var(--color-link));
+  color: rgba (var(--color-link));
 
-  &:hover{
+  &:hover {
     text-decoration: none;
   }
 }
@@ -104,6 +100,7 @@ time {
 
 .auto-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+  grid-template-columns: repeat(auto-fill,
+      minmax(var(--auto-grid-min-size, 16rem), 1fr));
   grid-gap: 3rem;
 }
