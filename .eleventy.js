@@ -26,7 +26,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('readtime', require('./lib/filters/readtime'));
 
   eleventyConfig.addCollection('post', collection =>
-
     collection
     .getFilteredByGlob('./src/blog/*.md')
     .filter(p => (!p.data.draft && p.date <= now))
