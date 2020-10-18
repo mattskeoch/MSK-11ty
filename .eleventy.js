@@ -5,7 +5,8 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addWatchTarget("./src/sass")
+  eleventyConfig.addWatchTarget("./src/sass");
+  eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy('./src/js');
   eleventyConfig.addPassthroughCopy("./src/img");
